@@ -64,6 +64,7 @@ function ToDoItem({
   };
   //use to know if the to do is delayed, that can a use a react state but its not necessary
   const delayed = new Date(expirationDate) < new Date(dateNow);
+
   return (
     <li
       className={`ToDoItem-container ${delayed && "ToDoDelayed"} ${
@@ -73,9 +74,9 @@ function ToDoItem({
       <p className="ToDoItemName">{text}</p>
       <div className="ToDoItem">
         {!completed && (
-          <div class="form-check">
+          <div className="form-check">
             <input
-              class="form-check-input checkbox"
+              className="form-check-input checkbox"
               type="checkbox"
               id={id}
               check={check}
@@ -101,9 +102,7 @@ function ToDoItem({
           <img className="ToDoItem-calendarIcon" alt="calendar icon"></img>
         </div>
         <img
-          className={`ToDoItem-Icon ${delayed && "ToDoItem-Icon--delayed"} ${
-            completed && "ToDoItem-Icon--completed"
-          }`}
+          className={`ToDoItem-Icon ${delayed && "ToDoItem-Icon--delayed"}`}
           alt="Icono segun estado de la tarea"
         ></img>
       </div>

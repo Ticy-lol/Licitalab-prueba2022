@@ -62,29 +62,24 @@ function ToDoHeader({
     });
     setToDoList(newToDoList);
   }
-  //function to completed the todos checked
-  function completeToDos() {
+  //function to delete to dos
+  function deteleToDos() {
     //get the checkboxes
     let checkboxes = document.getElementsByClassName("checkbox");
     if (!checkboxes) {
     } else {
       //copy the to do list
       let updatedToDoList = [...toDoList];
-      //complete all to dos
       for (let i = 0; i < checkboxes.length; i++) {
         //enter in this if only if the checkbox is checked
         if (checkboxes[i].getAttribute("check") === "si") {
           let id = checkboxes[i].getAttribute("id");
-          //api connection to update the to do
-          Axios.patch(`http://localhost:3333/toDo/${id}`, {
-            completed: true,
-          })
+          //api connection to delete to do
+          Axios.delete(`http://localhost:3333/toDo/${id}`)
             .then((response) => {
-              const toDoIndex = updatedToDoList.findIndex((toDo) => {
-                return toDo.id === id;
+              updatedToDoList = updatedToDoList.map((toDo) => {
+                return !toDo.id === id;
               });
-              console.log(id);
-              updatedToDoList[toDoIndex] = response.data;
             })
             .catch((error) => {
               console.log(error);
@@ -105,7 +100,7 @@ function ToDoHeader({
           variant="primary"
           size="lg"
           active
-          onClick={() => completeToDos()}
+          onClick={() => deteleToDos()}
         >
           Liberar seleccionados
         </Button>
