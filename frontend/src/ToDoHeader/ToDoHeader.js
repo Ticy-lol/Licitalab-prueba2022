@@ -42,7 +42,7 @@ function ToDoHeader({
     });
     setToDoList(newToDoList);
   }
-  //function order the to dos by the status expired,not completed and completed
+  //function order the to dos by the status expired,expire today and its okay
   function orderByDelay() {
     setButtonOrderByState(true);
     let newToDoList = [...toDoList];

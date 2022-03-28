@@ -1,7 +1,9 @@
 #IMPORTANTE
 
+- Hay una contradiccon en la redaccion del problema ya que al inicio dice que la aplicacion es crear, modificar y eliminar las tareas, y al final dice que el boton para ordenar segun estados, existiendo un liberado. Si el boton libera las tareas y es un estado, entonces no existiria un boton que elimine y viceversa.
+
 - Se espera que el usuario tenga instaladado NodeJs, conocimientos sobre uso de comandos en consola y entornos de ejecucion de React.Js con la version mas nueva Hooks.
-  -Se usaran comandos de npm por lo tanto si tiene otro paquete manejador de modulos de node tiene que buscar la equivalencia.
+  - Se usaran comandos de npm por lo tanto si tiene otro paquete manejador de modulos de node tiene que buscar la equivalencia.
 
 Intrucciones de Uso:
 
