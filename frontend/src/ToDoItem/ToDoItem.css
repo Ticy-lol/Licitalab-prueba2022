@@ -3,7 +3,7 @@
   margin-bottom: 20px;
   border-radius: 10px;
   box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
-  background-color: rgba(221, 230, 30);
+  background-color: greenyellow;
 }
 .ToDoItem {
   display: flex;
@@ -17,8 +17,8 @@
 .ToDoExpirationDate {
   margin-left: 30%;
 }
-.ToDoCompleted {
-  background-color: greenyellow !important;
+.ToDoExpireToday {
+  background-color: rgba(221, 230, 30) !important;
 }
 .ToDoDelayed {
   background-color: rgba(202, 6, 6);
@@ -26,25 +26,23 @@
 .ToDoItem-Icon {
   height: 50px;
   width: 50px;
-  content: url("../assets/icons/clockIcon.png");
+  content: url("../assets/icons/completedIcon.png");
 }
 .ToDoItem-Icon--delayed {
   height: 50px;
   width: 50px;
   content: url("../assets/icons/delayedIcon.png");
 }
-.ToDoItem-Icon--completed {
+.ToDoItem-Icon--expireToday {
   height: 50px;
   width: 50px;
-  content: url("../assets/icons/completedIcon.png");
+  content: url("../assets/icons/clockIcon.png");
 }
 .ToDoItem-calendarIcon {
   width: 30px;
   content: url("../assets/icons/calendarIcon.png");
 }
-/* .ToDoItem-calendarIcon:hover {
-  cursor: pointer;
-} */
+
 .ToDoItemData {
   display: flex;
   justify-content: center;

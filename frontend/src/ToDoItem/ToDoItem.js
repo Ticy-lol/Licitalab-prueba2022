@@ -64,11 +64,20 @@ function ToDoItem({
   };
   //use to know if the to do is delayed, that can a use a react state but its not necessary
   const delayed = new Date(expirationDate) < new Date(dateNow);
-
+  let expirationDate1 = new Date(expirationDate);
+  let dateNow1 = new Date(dateNow);
+  let expireToday = false;
+  if (
+    expirationDate1.getMonth() == dateNow1.getMonth() &&
+    expirationDate1.getFullYear() == dateNow1.getFullYear() &&
+    expirationDate1.getDay() == dateNow1.getDay()
+  ) {
+    expireToday = true;
+  }
   return (
     <li
       className={`ToDoItem-container ${delayed && "ToDoDelayed"} ${
-        completed && "ToDoCompleted"
+        expireToday && "ToDoExpireToday"
       }`}
     >
       <p className="ToDoItemName">{text}</p>
@@ -102,7 +111,9 @@ function ToDoItem({
           <img className="ToDoItem-calendarIcon" alt="calendar icon"></img>
         </div>
         <img
-          className={`ToDoItem-Icon ${delayed && "ToDoItem-Icon--delayed"}`}
+          className={`ToDoItem-Icon ${delayed && "ToDoItem-Icon--delayed"} ${
+            expireToday && "ToDoItem-Icon--expireToday"
+          }`}
           alt="Icono segun estado de la tarea"
         ></img>
       </div>
