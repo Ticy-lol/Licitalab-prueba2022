@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "api": "json-server db.json -p 3333 ",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
