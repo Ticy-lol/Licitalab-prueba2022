@@ -1,22 +1,3 @@
 {
-  "toDo": [
-    {
-      "id": 773296,
-      "createdDate": "2022-03-28",
-      "createdTime": "00:53:55",
-      "expirationDate": "2022-03-01",
-      "expirationTime": "00:53:55",
-      "text": "comer 1",
-      "completed": false
-    },
-    {
-      "id": 860080,
-      "createdDate": "2022-03-28",
-      "createdTime": "00:57:20",
-      "expirationDate": "2022-04-02",
-      "expirationTime": "00:57:20",
-      "text": "comer 2",
-      "completed": false
-    }
-  ]
+  "toDo": []
 }
